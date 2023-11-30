@@ -22,6 +22,7 @@ void foo(shape&&)
     puts("foo(shape&&)");
 }
 
+// 当T是模板参数时, T&& 是万能引用，保持值类别 (左值 右值) 并进行转发
 template <typename T>
 void bar(T&& s)
 {
@@ -32,5 +33,5 @@ int main()
 {
     circle temp;
     bar(temp);
-    bar(circle());
+    bar(circle()); // 保持值类别为右值
 }
