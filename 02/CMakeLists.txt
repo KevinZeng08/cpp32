@@ -7,3 +7,4 @@ include_directories(../common)
 
 add_executable(sp_test01_unique_ptr test01_unique_ptr.cpp)
 add_executable(sp_test02_shared_ptr test02_shared_ptr.cpp)
+add_executable(smart_ptr test03_smart_ptr.cpp)
